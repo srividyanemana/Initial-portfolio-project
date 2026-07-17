@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet"
+ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <title>PF</title>
+    <style>
+        html{
+            scroll-behavior: smooth;
+            }
+        .page-1{
+            background: linear-gradient(to left,#d02ad5, #6088b6, #f4586d );
+            margin: 0;
+            transition: opacity 1s ease;   /* smooth fade */
+        }
+        .page-2{
+             background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+             margin:0;
+        }
+        
+        body.fade-out {
+            opacity: 0;     /* fade transition */
+        }
+        
+        .container{
+            padding-top:20px;
+            padding-right:30px;
+        }
+
+        .container ul {
+            display:flex;
+            justify-content:flex-end;
+            list-style:none;
+            padding:0;
+            gap:30px;
+            margin:0;
+            margin-right:150px;
+            font-size:20px;
+        }
+
+        .container ul li a{
+            color:black;
+            text-decoration:none;
+            transition:0.3s;
+        }
+
+        .container ul li a:hover{
+            text-decoration:underline;
+            text-decoration-color:#480808;
+            text-underline-offset:4px;
+            text-decoration-thickness:3px;
+            
+        }
+
+        /* TEXT + IMAGE SECTION */
+        .content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            margin-top: 80px;
+        }
+
+        .content h1 {
+            color:black;
+            font-size: 40px;
+            opacity: 0;
+
+            /* Slow + delayed animation */
+            animation: fadeUp 1s ease-in-out infinite ;
+            animation-delay:0.3s;
+        }
+
+        .content img {
+            width: 400px;
+            height: 500px;
+            border-radius: 10px;
+            margin-left:200px;
+            opacity: 0;
+
+            /* Smooth + delayed animation */
+            animation: fadeRight 4s ease-in-out infinite ;
+            animation-delay: 0.3s;
+        }
+
+        /* ANIMATION KEYFRAMES */
+        @keyframes fadeUp {
+            0% { opacity: 0.6; transform: translateY(40px); }
+        
+            100% { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes fadeRight {
+            0% { opacity: 0.6; transform: translateX(80px); }
+        
+            100% { opacity: 1; transform: translateX(0); }
+        }
+           .contains{
+                 display: flex;
+            align-items:flex-start;   
+            padding: 50px;
+            gap: 40px;   
+            }
+            .contains img{
+                border-radius:70px;
+                
+                width:700px;
+                height:600px;
+            
+            }
+            #about{
+                color:rgb(254, 188, 20);
+                font-size:50px;
+                margin-top:10px;
+            }
+            p{
+                color:springgreen;
+                padding-top:20px;
+                font-size:20px;
+            }
+            .names{
+            display:flex;
+            justify-content:flex-start;
+            list-style:none;
+            padding:0;
+            gap:30px;
+            margin-top:10px;
+            font-size:24px;
+        }
+            .names  li a{
+            color:salmon;
+            text-decoration:none;
+
+        }
+
+        .names li a:hover{
+            text-decoration:underline;
+            text-decoration-color:yellow;
+            text-underline-offset:4px;
+            text-decoration-thickness:3px;
+        
+        }
+          .box {
+            display: none;
+            margin-top: 20px;
+            color:springgreen;
+            font-size: 20px;
+        }
+
+        .box ul {
+            margin: 0;
+            padding-left: 20px;
+            
+        }
+
+        /* SHOW CONTENT WHEN CLICKED */
+        .box:target {
+            display: block;
+        }
+        .page-3{
+            background: linear-gradient(to right,#f965af,#fd9c24);
+            margin:0;
+            height:700px;
+            
+        
+        }
+       .page-3 h1{
+            padding-top:30px;
+            margin-top:0;
+            padding-top:90px;
+            color:rgb(254, 254, 22);
+            font-size:40px;
+        }
+        .qualification{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 40px;
+}
+        .box-1{
+             width: 260px;
+    background: #222;
+    padding: 20px;
+    margin-top:55px;
+    border-radius: 10px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6), 
+                        0 0 20px rgba(100, 150, 255, 0.3) ;
+    transition: 0.3s;
+
+           
+        }
+        .box-1 h3{
+           font-size:20px;
+    margin-bottom:10px;
+    color:rgb(50, 245, 255);  
+        }
+
+        .box-1:hover{
+    background: #ff1e56;
+    transform: translateY(-10px);
+}
+     .box-1 p{
+    font-size:14px;   /* SMALL inside box */
+    line-height:1.5;
+    color:#ccc;
+}   
+.page-4{
+    background:linear-gradient(135deg, #1b5e20, #a5d6a7);
+    height:500px;
+    display:flex;
+    justify-content:space-between;
+    padding:80px;
+}
+
+/* LEFT SIDE */
+.info-1{
+    width:40%;
+}
+
+.page-4 h1{
+    color:orange;
+    font-size:40px;
+}
+
+.info-1 p{
+    color:white;
+    font-size:18px;
+    margin:10px 0;
+}
+
+.info-1 i{
+    color:red;
+    margin-right:10px;
+}
+
+/* RIGHT SIDE */
+.info-2{
+    width:45%;
+    display:flex;
+    flex-direction:column;
+}
+
+.info-2 input,
+.info-2 textarea{
+    padding:15px;
+    margin-top:35px;
+    margin-bottom:8px;
+    background:#2b2b2b;
+    border:none;
+    color:white;
+}
+
+.send-btn{
+    background:red;
+    color:white;
+    border:none;
+    margin-top:35px;
+    padding:12px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+
+    </style>
+</head>
+
+<body>
+
+    <!-- MENU --><div class="page-1">
+    <div class="container">
+        <ul>
+            
+            <li><a href="#">Home</a></li>
+            <li><a href="#" onclick="goNext()">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- TEXT + IMAGE -->
+    <div class="content">
+        <h1>Hi, I'm <span style="color:rgb(24, 7, 132)">Srividya</span> from India</h1>
+
+        <img src="girl1.jpeg">
+    </div></div>
+     
+
+    <div style="background-color:grey; height:20px; ">
+    </div>
+    
+    <div  class="page-2">
+    <div class="contains">
+             <img src="girl2.jpeg">
+       <div><h1 id="about">About Me</h1>
+        <p>
+            My name is Srividya Nemana, and I am a BSc Data Science student with a strong interest in technology and programming. 
+            I enjoy learning new tools and applying them to practical and creative projects. 
+            I believe in hard work, consistency, and continuous self-improvement. 
+            I am passionate about exploring different areas in the IT field and building my skills every day.
+            My goal is to grow professionally and build a successful career in the IT industry.
+        </p>
+        
+             <ul class="names">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#education">Education</a></li>
+        </ul>
+          <div id="skills" class="box">
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Python Basics</li>
+            </ul>
+        </div>
+
+        <div id="experience" class="box">
+           <ul>
+
+            <li>Fresher</li>
+            <li>Internship Experience</li></ul>
+        </div>
+
+        <div id="education" class="box">
+            <ul>
+           <li>BSc Data Science</li>
+           <li> Graduation Year: 2027</li></ul>
+        </div>
+    </div></div>
+ 
+    </div>
+ <div style="background-color:grey; height:20px; ">
+    </div>
+    <div class="page-3">
+        <h1 style="text-align:center;">MY QUALIFICATION</h1>
+        <div class="qualification">
+            <div class="box-1">
+                <h3>Matriculation</h3>
+                   <p>I successfully completed my matriculation from Oxford School under the State Board of Education in 2022.</p>
+                   <p>This stage laid the foundation for my academic discipline, basic subject knowledge,and learning habits.</p>
+            </div>
+            <div class="box-1">
+                <h3>Intermediate</h3>
+                   <p>I successfully completed my Intermediate education from Sri Aditya Junior College in 2024.</p>
+                   <p>During this phase, I strengthened my understanding of core subjects and developed analytical thinking required for higher studies.</p>
+            </div>
+            <div class="box-1">
+                <h3>Graduation</h3>
+                   <p>I am currently pursuing my undergraduate degree in BSc Data Science at Kakinada Aditya Women’s Degree College,Srikakulam, with an expected graduation year of 2027.</p>
+                   <p>This program is helping me build technical skills, practical knowledge, and a professional mindset for the IT industry.</p>
+            </div>
+        </div>
+        </div>
+        <div style="background-color:grey; height:20px; ">
+    </div>
+   <div class="page-4">
+
+  <!-- LEFT -->
+  <div class="info-1">
+    <h1>Contact Me</h1>
+
+    <p><i class="fa-solid fa-envelope"></i> abc@gmail.com</p>
+    <p><i class="fa-solid fa-phone"></i>123456789</p>
+
+    <p>
+      <i class="fa-brands fa-instagram"></i>
+      <i class="fa-brands fa-linkedin"></i>
+      <i class="fa-brands fa-github"></i>
+    </p>
+  </div>
+
+  <!-- RIGHT -->
+  <div class="info-2">
+    <input type="text" placeholder="Your Name">
+    <input type="email" placeholder="Your Email">
+    <textarea placeholder="Your Message"></textarea>
+
+    <button class="send-btn">
+      Send Message <i class="fa-solid fa-paper-plane"></i>
+    </button>
+  </div>
+
+</div>
+  <div style="background-color:grey; height:20px; ">
+    </div>
+
+    
+    
+</body>
+</html>
