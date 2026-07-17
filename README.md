@@ -1,19 +1,31 @@
-#Initial Personal Portfolio
+# Personal Portfolio
 
-A modern and responsive personal portfolio website designed to showcase my skills, projects, certifications, education, and achievements. This portfolio reflects my journey as a Data Science student and my passion for web development and technology.
+Initial version of my personal portfolio website created using HTML, CSS, and JavaScript. This portfolio showcases my skills, projects, education, certifications, achievements, and contact information.
+
+## Features
+- Responsive Design
+- Modern User Interface
+- Home Section
+- About Me Section
+- Skills Section
+- Education Section
+- Projects Section
+- Certifications Section
+- Contact Section
+- Social Media Links
+- Smooth Navigation
 
 ## Technologies Used
 - HTML5
 - CSS3
 - JavaScript
 
-## Features
-- Responsive Design
-- About Me
-- Skills
-- Education
-- Projects
-- Contact Section
+## Project Files
+- index.html
+- style.css
+- script.js
+- images/
+- README.md
 
 ## Author
 **Srividya Nemana**
